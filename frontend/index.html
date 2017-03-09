@@ -5,9 +5,11 @@
     <title>Vuec</title>
 </head>
 <body>
-    <p v-on:click="dorest">
-        {{ name }}
-    </p>
+    <ul>
+        <li v-for="todo in todos">
+            {{ todo }}
+        </li>
+    </ul>
     <script src="dist/build.js"></script>
 </body>
 </html>
