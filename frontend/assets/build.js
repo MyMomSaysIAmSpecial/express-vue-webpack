@@ -10852,7 +10852,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_vueResource2.default);
 
 var vue = new _vue2.default({
-    el: 'ul',
+    el: 'ol',
     data: {
         todos: []
     },
@@ -10862,7 +10862,6 @@ var vue = new _vue2.default({
 
             this.$http.get('http://192.168.33.33:9615/').then(function (response) {
                 _this.todos = response.body;
-                console.log(response.body);
             }, function (response) {
                 // error callback
             });

@@ -4,7 +4,7 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource);
 
 const vue = new Vue({
-    el: 'ul',
+    el: 'ol',
     data: {
         todos: []
     },
@@ -12,7 +12,6 @@ const vue = new Vue({
         doMagic: function (event) {
             this.$http.get('http://192.168.33.33:9615/').then(response => {
                 this.todos = response.body;
-                console.log(response.body);
             }, response => {
                 // error callback
             });
